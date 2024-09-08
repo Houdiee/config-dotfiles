@@ -1,0 +1,9 @@
+[directory]
+format = "[ ](#ffc777) [$path ](bold #c0caf5)"
+
+[cmd_duration]
+format = "[ 󰔛 $duration ]($style)"
+disabled = false
+style = "#ffc777"
+show_notifications = false
+min_time_to_notify = 60000

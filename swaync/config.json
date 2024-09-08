@@ -1,0 +1,95 @@
+{
+  "$schema": "/etc/xdg/swaync/configSchema.json",
+  "positionX": "right",
+  "positionY": "top",
+  "layer": "overlay",
+  "layer-shell": "true",
+  "cssPriority": "application",
+  "control-center-margin-top": 5,
+  "control-center-margin-bottom": 5,
+  "control-center-margin-right": 0,
+  "control-center-margin-left": 5,
+  "notification-icon-size": 64,
+  "notification-body-image-height": 128,
+  "notification-body-image-width": 200,
+  "timeout": 10,
+  "timeout-low": 5,
+  "timeout-critical": 0,
+  "fit-to-screen": true,
+  "control-center-width": 400,
+  "control-center-height": 650,
+  "notification-window-width": 375,
+  "keyboard-shortcuts": true,
+  "image-visibility": "when-available",
+  "transition-time": 200,
+  "hide-on-clear": true,
+  "hide-on-action": true,
+  "script-fail-notify": true,
+  "widgets": [
+    "title",
+    "menubar#desktop",
+    "volume",
+    "mpris",
+    "notifications"
+  ],
+  "widget-config": {
+    "title": {
+      "text": "Quick menu",
+      "clear-all-button": true,
+      "button-text": ""
+    },
+    "menubar#desktop": {
+      "menu#screenshot": {
+        "label": "   \t Screenshot\t\t",
+        "position": "left",
+        "actions": [
+          {
+            "label": "Whole screen",
+            "command": "grimblast --notify --cursor --freeze --wait 3 copysave output"
+          },
+          {
+            "label": "Whole window / Select region",
+            "command": "grimblast --notify --cursor --freeze --wait 3 copysave area"
+          }
+        ]
+      },
+      "menu#fan-control": {
+        "label": "󰕧\t    Record\t\t ",
+        "position": "left",
+        "actions": [
+          {
+            "label": "Passive",
+            "command": "sh -c 'swaync-client -cp; pkexec ~/.config/scripts/fancontrol.sh 0'"
+          },
+          {
+            "label": "Quiet",
+            "command": "sh -c 'swaync-client -cp; pkexec ~/.config/scripts/fancontrol.sh 25'"
+          },
+          {
+            "label": "Full speed",
+            "command": "sh -c 'swaync-client -cp; pkexec ~/.config/scripts/fancontrol.sh 100'"
+          }
+        ]
+      }
+    },
+    "volume": {
+      "label": "",
+      "expand-button-label": "",
+      "collapse-button-label": "",
+      "show-per-app": true,
+      "show-per-app-icon": true,
+      "show-per-app-label": false
+    },
+    "dnd": {
+      "text": "Do Not Disturb"
+    },
+    "mpris": {
+      "image-size": 96,
+      "image-radius": 4
+    },
+    "label": {
+      "text": "",
+      "clear-all-button": false
+    }
+  }
+}

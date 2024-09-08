@@ -1,0 +1,4 @@
+configuration {
+}
+
+@theme "/home/kerim/.config/rofi/themes/squared-nord.rasi"
