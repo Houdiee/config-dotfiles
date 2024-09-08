@@ -45,7 +45,8 @@ input "type:touchpad" {
 bindsym $mod+Return exec $term
 bindsym $mod+m exec $browser
 bindsym $mod+p exec $term -e ranger
-bindsym $mod++shift+escape exec $term -e btop
+bindsym $mod+shift+escape exec $term -e btop
+bindsym $mod+shift+n exec swaync-client -t
 
 bindsym $mod+Shift+q kill
 

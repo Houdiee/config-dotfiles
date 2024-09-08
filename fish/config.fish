@@ -1,4 +1,5 @@
 set -g fish_greeting
+set -gx EDITOR nvim
 
 fish_add_path /home/kerim/.cargo/bin/
 

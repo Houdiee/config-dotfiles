@@ -11,6 +11,7 @@
 // Positions
 	"modules-left": [
         "custom/paddl",
+        "sway/mode",
         "custom/left1",
 
         "sway/workspaces",  // workspaces
@@ -54,10 +55,10 @@
         "pulseaudio",           // output device
 
         "custom/left7",
+        "tray",
 
         "custom/left8",
         "custom/notification",            // window icon
-        "battery",              // battery
 
         "custom/leftin2",
         "custom/power"          // power button
@@ -223,6 +224,11 @@
         "tooltip": false,
         "on-click": "exec wlogout",
         "interval" : 86400
+    },
+
+    "tray": {
+        "icon-size": 18,
+        "spacing": 10
     },
 
     "custom/notification": {

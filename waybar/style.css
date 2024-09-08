@@ -68,7 +68,9 @@ tooltip {
 #window,
 #custom-cpuinfo,
 #memory,
+#tray,
 #cpu,
+#mode,
 #clock,
 #network,
 #pulseaudio,
@@ -132,6 +134,11 @@ tooltip {
     color: @workspaces;
     background: @background;
     padding-left: 2px;
+}
+
+#mode {
+    background-color: #ff007c;
+    border-radius: 8px;
 }
 
 #workspaces {
@@ -288,6 +295,11 @@ tooltip {
 
 #backlight {
     background: @backlight;
+}
+
+
+#tray {
+    background: #1e1e2e;
 }
 
 /* Battery */
