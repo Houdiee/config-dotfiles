@@ -139,9 +139,8 @@
 
     "clock#time": {
         "format": "󱑂 {:%I:%M}",
-        "tooltip": false,
-        "min-length": 8,
-        "max-length": 8
+        "timezone": "Australia/Sydney",
+        "tooltip": false
     },
 
     "clock#date": {
