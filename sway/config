@@ -1,3 +1,4 @@
+exec hyprlock
 exec waybar
 exec swaync
 exec swww-daemon
