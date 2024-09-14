@@ -52,6 +52,7 @@ bindsym $mod+Shift+q kill
 
 bindsym $mod+d exec $menu
 bindsym $mod+b exec grim -g "$(slurp -d)" - | wl-copy
+bindsym $mod+shift+b exec grim -g "$(slurp)" - | swappy -f -
 
 # Drag floating windows by holding down $mod and left mouse button.
 # Resize them with right mouse button + $mod.
@@ -114,6 +115,7 @@ bindsym $mod+minus scratchpad show
 bindsym XF86AudioMute exec pamixer -t
 bindsym XF86AudioRaiseVolume exec pamixer -i 5
 bindsym XF86AudioLowerVolume exec pamixer -d 5
+
 #
 mode "resize" {
     # left will shrink the containers width
@@ -131,5 +133,10 @@ mode "resize" {
 }
 
 bindsym $mod+r mode "resize"
+
+for_window [app_id="org.pulseaudio.pavucontrol"] floating enable
+for_window [app_id="org.gnome.Calculator"] floating enable 
+for_window [app_id="org.gnome.Calendar"] floating enable
+for_window [app_id="org.gnome.clocks"] floating enable
 
 include /etc/sway/config.d/*

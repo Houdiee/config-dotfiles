@@ -104,7 +104,7 @@ return {
       },
 
       x = {
-        ["<S-p>"] = { '"_dP' },
+        ["<leader>r"] = { '"_dP', desc = "Replace" },
       },
     },
   },

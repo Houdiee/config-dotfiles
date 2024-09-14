@@ -49,7 +49,7 @@
     ],
 
 	"modules-right": [
-        "custom/media",         // media info
+	    "mpris",
 
         "custom/left6",
         "pulseaudio",           // output device
@@ -156,7 +156,10 @@
                 "today": "<span color='#f38ba8'><b>{}</b></span>"
             }
         },
-        "actions": {"on-click-right": "mode"},
+        "actions": {
+            "on-click": "exec gnome-calendar",
+            "on-click-right": "mode"
+        },
         "min-length": 8,
         "max-length": 8
 	},
@@ -171,13 +174,14 @@
         "max-length": 9
     },
 
-    "custom/media": {
-        "exec": "/usr/bin/python3 ~/.config/waybar/scripts/mediaplayer.py",
-        "format": "{}",
-        "return-type": "json",
-        "on-click": "playerctl play-pause",
-        "min-length": 5,
-        "max-length": 35
+    "mpris": {
+        "format": "{player_icon} {title}",
+        "format-paused": "󰐍  {title}",
+        "player-icons": {
+            "firefox": "<span foreground='#ff007c'>󰗃 </span>",
+            "spotify": "<span foreground='#a6e3a1'>󰓇 </span>"
+        },
+        "max-length": 40
     },
 
     "pulseaudio": {
@@ -187,13 +191,9 @@
             "headphone": "󰋋",
             "default": ["󰕿", "󰖀", "󰕾"]
         },
-        "on-click": "~/.config/waybar/scripts/volumecontrol.sh -o m",
+        "on-click": "exec pamixer -t",
         "on-click-right": "pavucontrol -t 3",
-        "on-scroll-up": "~/.config/waybar/scripts/volumecontrol.sh -o i",
-        "on-scroll-down": "~/.config/waybar/scripts/volumecontrol.sh -o d",
-        "scroll-step": 10,
-        "min-length": 6,
-        "max-length": 6
+        "scroll-step": 5,
     },
 
     "backlight": {
