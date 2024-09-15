@@ -137,8 +137,9 @@ tooltip {
 }
 
 #mode {
-    background-color: #ff007c;
+    background-color: transparent;
     border-radius: 8px;
+    padding-left: 10px;
 }
 
 #workspaces {
