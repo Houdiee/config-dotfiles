@@ -1,3 +1,4 @@
+exec earlyoom
 exec hyprlock
 exec waybar
 exec swaync
@@ -118,22 +119,17 @@ bindsym XF86AudioRaiseVolume exec pamixer -i 5
 bindsym XF86AudioLowerVolume exec pamixer -d 5
 
 #
-mode "resize" {
-    # left will shrink the containers width
-    # right will grow the containers width
-    # up will shrink the containers height
-    # down will grow the containers height
+mode "RESIZE" {
     bindsym $left resize shrink width 30px
     bindsym $down resize shrink height 30px
     bindsym $up resize grow height 30px
     bindsym $right resize grow width 30px
 
-    # Return to default mode
     bindsym Return mode "default"
     bindsym Escape mode "default"
 }
 
-bindsym $mod+r mode "resize"
+bindsym $mod+r mode "RESIZE"
 
 for_window [app_id="org.pulseaudio.pavucontrol"] floating enable
 for_window [app_id="org.gnome.Calculator"] floating enable 
